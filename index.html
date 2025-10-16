@@ -244,18 +244,21 @@
     </section>
     <section class="contact p-5">
         <div class="container bg-light rounded-2 p-3">
-            <form action="submit">
+            <form action="submit" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="firstname lastname" required>
+                    <input type="text" class="form-control" id="name" placeholder="Firstname Lastname" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3"></textarea>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
                 </div>
 
                 <button type="submit" class="btn btn-primary rounded-2">Send Message</button>

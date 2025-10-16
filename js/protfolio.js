@@ -34,3 +34,17 @@ window.addEventListener("scroll", () => {
     animated = true;
   }
 });
+const form = document.querySelector(".needs-validation");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // stop default submission
+  if (!form.checkValidity()) {
+    e.stopPropagation();
+    form.classList.add("was-validated");
+  } else {
+    alert("Message sent successfully! (simulated)");
+    form.reset();
+    form.classList.remove("was-validated");
+  }
+});
+
