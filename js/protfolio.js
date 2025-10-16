@@ -1,15 +1,19 @@
+// Navbar scroll
 const header = document.querySelector("#header");
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("navbar-scroll", window.scrollY > 80);
-});
+// Skills animation
+const progressBars = document.querySelectorAll(".progress-bar");
+const skillsSection = document.querySelector("#skills");
+let skillsAnimated = false;
 
+// Typed.js
 const typed = new Typed("#typed-role", {
   strings: [
     "Front-End Developer",
     "Front-End Designer",
     "UI Designer",
     "Web Enthusiast",
+    "JavaScript Developer",
   ],
   typeSpeed: 75,
   backSpeed: 37,
@@ -18,26 +22,33 @@ const typed = new Typed("#typed-role", {
   smartBackspace: true,
 });
 
-const progressBar = document.getElementsByClassName("progress-bar");
-let animated = false;
-const skills = document.querySelector("#skills");
-
+// Scroll listener
 window.addEventListener("scroll", () => {
-  const rect = skills.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    for (let i = 0; i < progressBar.length; i++) {
-      const targetWidth = progressBar[i].dataset.width;
-      setTimeout(() => {
-        progressBar[i].style.width = targetWidth + "%";
-      }, i * 200);
+  const scrollY = window.scrollY;
+
+  // Navbar shadow on scroll
+  header.classList.toggle("navbar-scroll", scrollY > 80);
+
+  // Animate skills when section enters viewport
+  if (!skillsAnimated) {
+    const rect = skillsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      progressBars.forEach((bar, i) => {
+        const targetWidth = bar.dataset.width;
+        setTimeout(() => {
+          bar.style.width = targetWidth + "%";
+        }, i * 200);
+      });
+      skillsAnimated = true;
     }
-    animated = true;
   }
 });
+
+// Form validation
 const form = document.querySelector(".needs-validation");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); // stop default submission
+  e.preventDefault();
   if (!form.checkValidity()) {
     e.stopPropagation();
     form.classList.add("was-validated");
@@ -47,4 +58,3 @@ form.addEventListener("submit", (e) => {
     form.classList.remove("was-validated");
   }
 });
-

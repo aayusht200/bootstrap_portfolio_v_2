@@ -128,6 +128,7 @@
                                 <h1 class="modal-title fs-5" id="calculatorProjectLabel">Calculator Project</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
+
                             </div>
                             <div class="modal-body">
                                 A basic on-screen calculator built with HTML, CSS, and JavaScript, performing
@@ -191,6 +192,7 @@
                                 <h1 class="modal-title fs-5" id="rockPaperScissorsLabel">Rock Paper Scissors</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
+
                             </div>
                             <div class="modal-body">
                                 A browser-based game built with JavaScript and HTML, where you play against
@@ -247,22 +249,50 @@
             <form action="submit" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Firstname Lastname" required>
-                    <div class="invalid-feedback">Please enter your name.</div>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-person"></i>
+                        </span>
+                        <input type="text" class="form-control" id="name" placeholder="Firstname Lastname" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                    <div class="invalid-feedback">Please enter a valid email.</div>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" required></textarea>
-                    <div class="invalid-feedback">Please enter your message.</div>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-card-text"></i>
+                        </span>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
                 </div>
-
                 <button type="submit" class="btn btn-primary rounded-2">Send Message</button>
             </form>
+        </div>
+    </section>
+    <section class="footer p-2 pb-0 ms-auto rounded-2">
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+            <p class="mb-0">&copy; 2025 Aayush Trivedi. All Rights Reserved.</p>
+            <a href="https://github.com/aayusht200" target="_blank" class="mx-2">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/aayusht-trivedi/" target="_blank" class="mx-2">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:your.email@example.com" class="mx-2">
+                <i class="bi bi-envelope"></i>
+            </a>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
@@ -271,13 +301,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 2000, // animation duration in milliseconds
-            once: true      // ensures animation happens only once
-        });
-    </script>
     <script src="js/protfolio.js">
     </script>
 </body>
