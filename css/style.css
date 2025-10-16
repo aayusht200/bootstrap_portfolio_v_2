@@ -44,3 +44,11 @@ h3 {
 .progress {
   height: 1rem;
 }
+#projects button {
+  margin-bottom: 1rem;
+  width: 200px;
+}
+#projects button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

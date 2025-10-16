@@ -112,61 +112,135 @@
             </div>
         </div>
     </section>
-    <section id="projects">
-        <div class="container bg-light rounded-2 p-3">
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
-                    <h3>Calculator Project</h3>
-                    <div class="lead">A basic on-screen calculator built with HTML, CSS, and JavaScript, performing
-                        addition, subtraction, multiplication, and division. Features include a clean interface,
-                        responsive buttons, input validation, and optional decimal/backspace support.</div>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://aayusht200.github.io/calculator/" target="_blank">Live
-                            Page</a></span>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://github.com/aayusht200/calculator" target="_blank">Github
-                            Repo</a></span>
-                </div>
-                <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
-                    <h3>Etch A Sketch (EAS)</h3>
-                    <div class="lead">A web-based drawing app built with JavaScript, HTML, and CSS, featuring a
-                        responsive grid, multiple drawing modes (black & white, colored, disappearing), and a clear
-                        grid
-                        button for interactive drawing.</div>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://aayusht200.github.io/EAS/" target="_blank">Live
-                            Page</a></span>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://github.com/aayusht200/EAS" target="_blank">Github
-                            Repo</a></span>
-                </div>
-                <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
-                    <h3>Rock Paper Scissors</h3>
-                    <div class="lead">A browser-based game built with JavaScript and HTML, where you play against
-                        the computer. First to 5 points wins, with interactive prompts and console-based scoring.
+    <section id="projects" class="container bg-light rounded-2 p-3">
+        <h3>Projects</h3>
+        <div class="row">
+            <div id="calculator" class="col-md-6">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#calculatorProject">
+                    Calculator Project
+                </button>
+                <div class="modal fade" id="calculatorProject" tabindex="-1" aria-labelledby="calculatorProjectLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="calculatorProjectLabel">Calculator Project</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                A basic on-screen calculator built with HTML, CSS, and JavaScript, performing
+                                addition, subtraction, multiplication, and division. Features include a clean interface,
+                                responsive buttons, input validation, and optional decimal/backspace support.
+                            </div>
+                            <div class="modal-footer">
+                                <a class="text-decoration-none" href="https://aayusht200.github.io/calculator/"
+                                    target="_blank">Live
+                                    Page</a>
+                                <a class="text-decoration-none" href="https://github.com/aayusht200/calculator"
+                                    target="_blank">Github
+                                    Repo</a>
+                            </div>
+                        </div>
                     </div>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://aayusht200.github.io/RockPaperScissors/" target="_blank">Live
-                            Page</a></span>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://github.com/aayusht200/RockPaperScissors" target="_blank">Github
-                            Repo</a></span>
                 </div>
-                <div class="col-12 col-md-6 mb-4" data-aos="fade-up">
-                    <h3>Cafe Week</h3>
-                    <div class="lead">A responsive website showcasing four unique cafes with images, descriptions,
-                        and personal reviews. Built with HTML, CSS, and Google Fonts, featuring sticky navigation
-                        and mobile-friendly design.</div>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://aayusht200.github.io/passionProject/" target="_blank">Live
-                            Page</a></span>
-                    <span class="badge me-1 mb-1"><a class="text-decoration-none"
-                            href="https://github.com/aayusht200/passionProject" target="_blank">Github
-                            Repo</a></span>
+            </div>
+            <div id="eas" class="col-md-6">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#etchASketch">
+                    Etch A Sketch (EAS)
+                </button>
+                <div class="modal fade" id="etchASketch" tabindex="-1" aria-labelledby="etchASketchLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="etchASketchLabel">Etch A Sketch (EAS)</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                A web-based drawing app built with JavaScript, HTML, and CSS, featuring a
+                                responsive grid, multiple drawing modes (black & white, colored, disappearing), and a
+                                clear
+                                grid
+                                button for interactive drawing.
+                            </div>
+                            <div class="modal-footer">
+                                <a class="text-decoration-none" href="https://aayusht200.github.io/EAS/"
+                                    target="_blank">Live
+                                    Page</a>
+                                <a class="text-decoration-none" href="https://github.com/aayusht200/EAS"
+                                    target="_blank">Github
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rps" class="col-md-6">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#rockPaperScissors">
+                    Rock Paper Scissors
+                </button>
+                <div class="modal fade" id="rockPaperScissors" tabindex="-1" aria-labelledby="rockPaperScissorsLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="rockPaperScissorsLabel">Rock Paper Scissors</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                A browser-based game built with JavaScript and HTML, where you play against
+                                the computer. First to 5 points wins, with interactive prompts and console-based
+                                scoring.
+                            </div>
+                            <div class="modal-footer">
+                                <a class="text-decoration-none" href="https://aayusht200.github.io/RockPaperScissors/"
+                                    target="_blank">Live
+                                    Page</a>
+                                <a class="text-decoration-none" href="https://github.com/aayusht200/RockPaperScissors"
+                                    target="_blank">Github
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cw" class="col-md-6">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cafeWeek">
+                    Cafe Week
+                </button>
+                <div class="modal fade" id="cafeWeek" tabindex="-1" aria-labelledby="cafeWeekLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="cafeWeekLabel">Cafe Week</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                A responsive website showcasing four unique cafes with images, descriptions,
+                                and personal reviews. Built with HTML, CSS, and Google Fonts, featuring sticky
+                                navigation
+                                and mobile-friendly design.
+                            </div>
+                            <div class="modal-footer">
+                                <a class="text-decoration-none" href="https://aayusht200.github.io/passionProject/"
+                                    target="_blank">Live
+                                    Page</a>
+                                <a class="text-decoration-none" href="https://github.com/aayusht200/passionProject"
+                                    target="_blank">Github
+                                    Repo</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+
     </section>
     <section class="contact p-5">
         <div class="container bg-light rounded-2 p-3">
