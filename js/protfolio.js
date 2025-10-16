@@ -2,7 +2,6 @@ const header = document.querySelector("#header");
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("navbar-scroll", window.scrollY > 80);
-  console.log(header.classList);
 });
 
 const typed = new Typed("#typed-role", {
@@ -17,4 +16,21 @@ const typed = new Typed("#typed-role", {
   loop: true,
   backDelay: 1000,
   smartBackspace: true,
+});
+
+const progressBar = document.getElementsByClassName("progress-bar");
+let animated = false;
+const skills = document.querySelector("#skills");
+
+window.addEventListener("scroll", () => {
+  const rect = skills.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom >= 0) {
+    for (let i = 0; i < progressBar.length; i++) {
+      const targetWidth = progressBar[i].dataset.width;
+      setTimeout(() => {
+        progressBar[i].style.width = targetWidth + "%";
+      }, i * 200);
+    }
+    animated = true;
+  }
 });

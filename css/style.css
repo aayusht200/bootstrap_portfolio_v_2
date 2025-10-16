@@ -7,6 +7,7 @@
 #heading {
   font-size: 2rem;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -32,4 +33,14 @@ h3 {
 .navbar-scroll {
   opacity: 0.8;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  transition: width 1.5s ease-in-out;
+  background: linear-gradient(90deg, #d2e7fb, #b2daf6);
+  color: black;
+  font-size: 0.8rem;
+}
+.progress {
+  height: 1rem;
 }
